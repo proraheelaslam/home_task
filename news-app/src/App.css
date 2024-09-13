@@ -1,0 +1,73 @@
+.app-container {
+  display: flex;
+  height: 100vh; /* Full height layout */
+}
+
+.main-wrapper {
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  padding: 20px;
+  flex: 1; /* Main content grows to take up the remaining space */
+  background-color: #f8f9fa;
+  margin-top: 60px;
+}
+
+.news-sections {
+  display: flex;
+  gap: 20px; /* Space between the two sections */
+}
+
+/* Main News Feed */
+.news-feed {
+  width: 70%; /* Main news section takes up 70% of the space */
+  background-color: #f8f9fa; /* Light background */
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Trending News */
+.trending-news {
+  width: 30%; /* Trending news takes up 30% */
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* On mobile */
+
+@media (max-width: 768px) {
+  
+
+  .news-sections {
+    flex-direction: column; /* Stack sections vertically on mobile */
+    gap: 0; /* Remove gap between sections on mobile */
+  }
+
+  .news-feed {
+    width: 100%; /* Full width on mobile */
+    background-color: #f8f9fa; /* Light background */
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .trending-news {
+    width: 100%; /* Full width on mobile */
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 47px;
+  }
+
+  /* Ensure the news grid is stacked vertically */
+  .news-grid {
+    display: block; /* Stack news items vertically */
+  }
+
+  .news-item {
+    margin-bottom: 20px; /* Space between news items */
+  }
+}

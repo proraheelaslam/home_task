@@ -1,0 +1,67 @@
+.news-feed {
+  padding: 0px 20px; 
+  border-radius: 8px;
+}
+
+.news-feed h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* First news item spans full width */
+.news-item.large {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Grid for two-column layout */
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 20px; /* Space between columns */
+}
+
+/* Individual news item styling */
+.news-item {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.news-item h2 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.news-author {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Default styles */
+.news-feed {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+}

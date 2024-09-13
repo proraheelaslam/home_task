@@ -1,0 +1,228 @@
+/* General Layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .login-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  /* Left side with balance and chart */
+  .login-left {
+    flex: 1;
+    background-color: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5rem;
+  }
+  .login-left p{ 
+    margin-top: 13px;
+  }
+  
+  .welcome-back {
+    margin-bottom: 3rem;
+  }
+  
+  .welcome-back h1 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .balance-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  
+  .balance-card h2 {
+    color: #888;
+    font-size: 1.2rem;
+  }
+  
+  .balance-card p {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .chart {
+    margin-top: 2rem;
+  }
+  
+  .donut-chart {
+    width: 100px;
+    height: 100px;
+    background-color: #eee; /* Placeholder for your chart */
+    border-radius: 50%;
+  }
+  
+  .new-transaction {
+    margin-top: 2rem;
+  }
+  
+  .new-transaction button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #005cf5;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .new-transaction p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Right side - login form */
+  .login-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+  }
+  
+  .login-form {
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  .login-form h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .login-form p {
+    margin-bottom: 2rem;
+    color: #888;
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .forgot-password {
+    display: block;
+    margin-bottom: 1rem;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #005cf5;
+  }
+  
+  .login-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #005cf5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  
+  .social-login {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .google-login, .facebook-login {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .google-login {
+    background-color: #f4f4f4;
+  }
+  
+  .facebook-login {
+    background-color: #f4f4f4;
+}
+
+.register-redirect {
+    text-align: center;
+    margin-top: 1rem;
+  }
+.register-redirect a {
+color: #005cf5;
+text-decoration: none;
+font-weight: bold;
+}
+  
+@media (max-width: 1024px) {
+    .login-container {
+      flex-direction: column;
+      padding: 40px 20px;
+    }
+    
+    .login-left, .login-right {
+      flex: none;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .login-left h1 {
+      font-size: 2.5rem;
+    }
+  
+    .login-form {
+      max-width: 350px;
+    }
+  }
+  
+  /* For mobile phones */
+  @media (max-width: 768px) {
+    .login-container {
+      padding: 20px;
+    }
+  
+    .login-left h1 {
+      font-size: 2rem;
+    }
+  
+    .login-form {
+      max-width: 100%;
+      padding: 20px;
+    }
+  
+    .login-form input,
+    .login-form button {
+      font-size: 1rem;
+    }
+    .login-form { width: 100%;}
+    .login-left { padding-left: 0px;}
+    .welcome-back {     margin-top: 16px;}
+  }
+
+  .error-message {
+    color: red !important;
+    font-weight: bold;
+  }
+  
+  /* Add styles for success messages */
+  .success-message {
+    color: green !important;
+    font-weight: bold;
+  }

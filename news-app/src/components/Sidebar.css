@@ -1,0 +1,166 @@
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    padding-top: 2px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #ddd;
+    padding-bottom: 2px;
+    padding-left: 19px;
+    transform: translateX(0); /* Default: visible */
+   
+}
+
+/* Logo Section Styles */
+.logo_section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 7px;
+    justify-content: space-between;
+}
+
+.logo-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo-name {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+}
+
+.menu-icon-link {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    color: #000;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.profile-info h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.profile-info p {
+    margin: 0;
+    font-size: 12px;
+    color: #888;
+    font-weight: 500;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ 
+
+.sidebar-nav ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar-nav ul li a:hover {
+    background-color: #e9f1ff;
+    color: #007bff;
+}
+
+.sidebar-nav ul li a.selected {
+    background-color: #e9f1ff;
+    color: #007bff;
+}
+
+.sidebar-nav ul li a .icon {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-footer a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333; 
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar-footer a:hover {
+    background-color: #e9f1ff;
+    color: #007bff;
+}
+
+.sidebar-footer a .icon {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+/* Sidebar Hidden on Mobile */
+.sidebar.hidden {
+    transform: translateX(-100%); /* Hidden off-screen */
+}
+
+ 
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        z-index: 1000;
+        transform: translateX(-100%); /* Hide by default on mobile */
+    }
+
+    .sidebar.open {
+        transform: translateX(0); /* Show when toggled */
+    }
+
+    .menu-icon-link {
+        display: block;
+    }
+}
